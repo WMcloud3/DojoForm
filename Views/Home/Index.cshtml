@@ -1,0 +1,46 @@
+﻿@model User
+
+<form asp-controller="Home" asp-action="Submit" method="post">
+    <div class="form-group">
+        <label asp-for="UserName"></label>
+        <input asp-for="UserName" class="form-control w-25">
+        <span class="alert-danger" asp-validation-for="UserName"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="UserDojo"></label>
+        <input asp-for="UserDojo" class="form-control w-25">
+        <span class="alert-danger" asp-validation-for="UserDojo"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="UserDojo"></label>
+        <select asp-for="UserDojo" class="form-control w-25">
+            <option value="none" selected disabled hidden>Select an Option</option>
+            <option value="Chicago">Chicago</option>
+            <option value="Los Angeles">Los Angeles</option>
+            <option value="Boise">Boise</option>
+            <option value="Silicon Valley">Silicon Valley</option>
+        </select>
+        <span class="alert-danger" asp-validation-for="UserDojo"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="FavLanguage"></label>
+        <select asp-for="FavLanguage" class="form-control w-25">
+            <option value="none" selected disabled hidden>Select an Option</option>
+            <option value="C#">C#</option>
+            <option value="Python">Python</option>
+            <option value="JavaScript">JavaScript</option>
+            <option value="Java">Java</option>
+        </select>
+        <span class="alert-danger" asp-validation-for="FavLanguage"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Comment"></label>
+        <input asp-for="Comment" class="form-control w-25">
+    </div>
+
+    <input type="submit" class= "btn btn-primary btn-lg">
+</form>
